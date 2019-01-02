@@ -1,0 +1,74 @@
+<header><button (click)="randomize()" [disabled]="selectedSets === ['Promo']">Randomize</button></header>
+<p class="setup">
+	<span *ngIf="supply.setup.platCol"><img src="assets/platCol.png">Platinums/Colonies</span>
+	<span *ngIf="supply.setup.shelters"><img src="assets/shelters.png">Shelters</span>
+</p>
+
+<ul class="cards">
+	<li *ngFor="let card of supply.cards" (click)="onSelect(card)" [class.selected]="card === selectedCard"><img src="assets/cards/{{ card.set.replace(' ', '_') }}/{{ card.name.replace('’', '').replace('/', '').split(' ').join('_') }}.jpg"/><br>{{ card.set }}</li>
+</ul>
+<ul class="wide">
+	<li *ngFor="let card of supply.events" (click)="onSelect(card)" [class.selected]="card === selectedCard"><img src="assets/cards/events/{{ card.name.replace('’', '').split(' ').join('_') }}.jpg"/><br>{{ card.set }}</li>
+</ul>
+<ul class="wide">
+	<li *ngFor="let card of supply.landmarks" (click)="onSelect(card)" [class.selected]="card === selectedCard"><img src="assets/cards/landmarks/{{ card.name.replace('’', '').split(' ').join('_') }}.jpg"/><br>{{ card.set }}</li>
+</ul>
+<ul class="wide">
+	<li *ngFor="let card of supply.projects" (click)="onSelect(card)" [class.selected]="card === selectedCard"><img src="assets/cards/projects/{{ card.name.replace('’', '').split(' ').join('_') }}.jpg"/><br>{{ card.set }}</li>
+</ul>
+
+<p class="wide">
+	<span *ngIf="supply.setup.tavernMats"><img src="assets/Tavern_mat.jpg">Tavern Mats</span>
+	<span *ngIf="supply.setup.coffers"><img src="assets/Coffers.jpg">Coffers</span>
+</p>
+<p class="setup">
+	<span *ngIf="supply.setup.VP"><img src="assets/victory.png">Victory tokens/mats</span>
+	<span *ngIf="supply.setup.debt"><img src="assets/debtTokens.png">Debt</span>
+	<span *ngIf="supply.setup.potions"><img src="assets/cards/Alchemy/Potion.jpg">Potions</span>
+	<span *ngIf="supply.setup.spoils"><img src="assets/Spoils.jpg">Spoils</span>
+	<span *ngIf="supply.setup.ruins"><img src="assets/ruins.png">Ruins</span>
+	<span *ngIf="supply.setup.coins"><img src="assets/coins.png">Coins</span>
+	<span *ngIf="supply.setup.embargo"><img src="assets/embargo.png">Embargo tokens</span>
+	<span *ngIf="supply.setup.journey"><img src="assets/journey.png">Journey token</span>
+	<span *ngIf="supply.setup.trashing"><img src="assets/trashing.png">Trashing token</span>
+	<span *ngIf="supply.setup.estate"><img src="assets/estate.png">Estate token</span>
+	<span *ngIf="supply.setup.plusAction"><img src="assets/plusAction.png">+1 Action token</span>
+	<span *ngIf="supply.setup.plusCard"><img src="assets/plusCard.png">+1 Card token</span>
+	<span *ngIf="supply.setup.plusBuy"><img src="assets/plusBuy.png">+1 Buy token</span>
+	<span *ngIf="supply.setup.plusOne"><img src="assets/plusCoin.png">+1 Coin token</span>
+	<span *ngIf="supply.setup.minusTwo"><img src="assets/minusTwo.png">−2 Cost token</span>
+	<span *ngIf="supply.setup.minusOne"><img src="assets/minusOne.png">−1 Coin token</span>
+	<span *ngIf="supply.setup.minusDraw"><img src="assets/minusDraw.png">−1 Card token</span>
+	<span *ngIf="supply.setup.nativeVillage"><img src="assets/Native_Village_mat.jpg">Native Village mat</span>
+	<span *ngIf="supply.setup.pirateShip"><img src="assets/Pirate_Ship_mat.jpg">Pirate Ship mat</span>
+	<span *ngIf="supply.setup.island"><img src="assets/Island_mat.jpg">Island mat</span>
+	<span *ngIf="supply.setup.tradeRoute"><img src="assets/Trade_Route_mat.jpg">Trade Route mat</span>
+	<span *ngIf="supply.setup.prizes"><img src="assets/cards/Cornucopia/prizes.png">Prizes</span>
+	<span *ngIf="supply.setup.hermit"><img src="assets/Madman.jpg">Madman pile</span>
+	<span *ngIf="supply.setup.urchin"><img src="assets/Mercenary.jpg">Mercenary pile</span>
+	<span *ngIf="supply.setup.page"><img src="assets/page.png">Page upgrades</span>
+	<span *ngIf="supply.setup.peasant"><img src="assets/peasant.png">Peasant upgrades</span>
+	<span *ngIf="supply.setup.mirror"><img src="assets/cards/Nocturne/Haunted_Mirror.jpg">Haunted Mirror</span>
+	<span *ngIf="supply.setup.lamp"><img src="assets/cards/Nocturne/Magic_Lamp.jpg">Magic Lamp</span>
+	<span *ngIf="supply.setup.goat"><img src="assets/cards/Nocturne/Goat.jpg">Goat</span>
+	<span *ngIf="supply.setup.pasture"><img src="assets/cards/Nocturne/Pasture.jpg">Pasture</span>
+	<span *ngIf="supply.setup.pouch"><img src="assets/cards/Nocturne/Pouch.jpg">Pouch</span>
+	<span *ngIf="supply.setup.cursedGold"><img src="assets/cards/Nocturne/Cursed_Gold.jpg">Cursed Gold</span>
+	<span *ngIf="supply.setup.luckyCoin"><img src="assets/cards/Nocturne/Lucky_Coin.jpg">Lucky Coin</span>
+	<span *ngIf="supply.setup.wisp"><img src="assets/cards/Nocturne/Will-o-Wisp.jpg">Will o’ Wisp</span>
+	<span *ngIf="supply.setup.imp"><img src="assets/cards/Nocturne/Imp.jpg">Imp</span>
+	<span *ngIf="supply.setup.ghost"><img src="assets/cards/Nocturne/Ghost.jpg">Ghost</span>
+	<span *ngIf="supply.setup.zombies"><img src="assets/cards/Nocturne/Zombies.png">Zombies</span>
+	<span *ngIf="supply.setup.bats"><img src="assets/cards/Nocturne/Bat.jpg">Bats</span>
+	<span *ngIf="supply.setup.obelisk"><img src="assets/cards/{{ obeliskChoice.set.replace(' ', '_') }}/{{ obeliskChoice.name.replace('’', '').replace('/', '').split(' ').join('_') }}.jpg">Obelisk choice</span>
+</p>
+<p class="wide">
+	<span *ngIf="supply.setup.bane"><span class="bane"><img src="assets/cards/{{ baneChoice.set.replace(' ', '_') }}/{{ baneChoice.name.replace('’', '').replace('/', '').split(' ').join('_') }}.jpg"></span>Young Witch’s Bane</span>
+	<span *ngIf="supply.setup.boon"><img src="assets/cards/Nocturne/Boon.jpg">Boon deck</span>
+	<span *ngIf="supply.setup.hex"><img src="assets/cards/Nocturne/Hex.jpg">Hex deck</span>
+</p>
+
+<header class="detail" *ngIf="selectedCard"><button (click)="swapCard(selectedCard)">Swap</button><button (click)="selectedCard = null">X</button></header>
+<dom-card-detail [card]="selectedCard"></dom-card-detail>
+
+<!--<app-options (changeSets)="changeSets($event)" (changeSort)="changeSort($event)"></app-options>-->
