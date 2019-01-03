@@ -3,8 +3,9 @@ import { CookieService } from 'ngx-cookie-service';
 
 @Component({
 	selector: 'dom-options',
+	providers: [ CookieService ],
 	templateUrl: './options.component.html',
-	styleUrls: ['./options.component.scss']
+	styleUrls: ['./options.component.css']
 })
 export class OptionsComponent implements OnInit {
 

@@ -71,4 +71,4 @@
 <header class="detail" *ngIf="selectedCard"><button (click)="swapCard(selectedCard)">Swap</button><button (click)="selectedCard = null">X</button></header>
 <dom-card-detail [card]="selectedCard"></dom-card-detail>
 
-<!--<app-options (changeSets)="changeSets($event)" (changeSort)="changeSort($event)"></app-options>-->
+<dom-options (changeSets)="changeSets($event)" (changeSort)="changeSort($event)"></dom-options>

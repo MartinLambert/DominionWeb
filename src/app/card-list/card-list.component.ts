@@ -81,6 +81,7 @@ export class CardListComponent implements OnInit {
 			this.addProject();
 
 		this.doSetup();
+		console.log(this.supply);
 	}
 
 	randomCard(): Card {
@@ -259,6 +260,7 @@ export class CardListComponent implements OnInit {
 		this.supply.cards = [];
 		this.supply.events = [];
 		this.supply.landmarks = [];
+		this.supply.projects = [];
 	}
 
 	resetSetup(): void {
