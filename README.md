@@ -1,3 +1,3 @@
-# Dominion Randomizer
+# Dominion Web
 
-Playing around with Angular 7 by building a web-based tool for randomizing Dominion cards.
+Web-based randomizer for Dominion cards. A test app for playing with Angular 7.

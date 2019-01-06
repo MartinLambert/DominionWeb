@@ -11,9 +11,8 @@ export class CardDetailComponent implements OnInit {
 	@Input() card: Card;
 	front = true;
 
-	constructor() { }
+	constructor() {}
 
-	ngOnInit() {
-	}
+	ngOnInit() {}
 
 }

@@ -1,6 +1,7 @@
 header {
 	text-align: center;
 }
+
 ul {
 	padding: 0;
 
@@ -15,7 +16,6 @@ ul {
 		background: #000;
 		padding: 0.25em;
 		text-align: center;
-		color: #FFF;
 		font-size: 0.75em;
 		text-transform: uppercase;
 
@@ -25,6 +25,7 @@ ul {
 		}
 	}
 }
+
 .setup, .wide {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(178px, 1fr));
@@ -48,11 +49,12 @@ ul {
 .wide {
 	grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
 }
+
 .bane {
-	background: transparent url('assets/cards/Cornucopia/Bane.jpg') center/contain no-repeat;
 	width: 230px;
 	height: 180px;
 }
+
 header.detail {
 	display: flex;
 	justify-content: space-between;
