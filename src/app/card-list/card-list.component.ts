@@ -181,7 +181,7 @@ export class CardListComponent implements OnInit {
 		if (card.id === 1223) this.supply.setup.cursedGold = true;
 		if (card.id === 1226) { this.supply.setup.lamp = true; this.supply.setup.wishes = true; }
 		if (card.id === 1227) this.supply.setup.pasture = true;
-		if (card.id === 1229) this.supply.setup.imp = true;
+		if (card.id === 1210 || card.id === 1229) this.supply.setup.imp = true;
 		if (card.id === 1230) this.supply.setup.pouch = true;
 		if (card.id === 1232) this.supply.setup.bats = true;
 		if (card.id === 1302) { this.supply.setup.horn = true; this.supply.setup.lantern = true; }

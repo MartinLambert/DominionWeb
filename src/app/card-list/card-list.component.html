@@ -10,7 +10,7 @@
 	<li *ngFor="let card of supply.cards" (click)="onSelect(card)" [class.selected]="card === selectedCard"><img src="assets/cards/{{ card.set.replace(' ', '_') }}/{{ card.name.replace('’', '').replace('/', '').split(' ').join('_') }}.jpg"><br>{{ card.set }}</li>
 </ul>
 <ul class="wide">
-	<li *ngFor="let card of supply.permanents" [class.selected]="card === selectedCard"><img src="assets/cards/permanents/{{ card.name.replace('’', '').split(' ').join('_') }}.jpg"/><br>{{ card.set }}</li>
+	<li *ngFor="let card of supply.permanents" (click)="onSelect(card)" [class.selected]="card === selectedCard"><img src="assets/cards/permanents/{{ card.name.replace('’', '').split(' ').join('_') }}.jpg"/><br>{{ card.set }}</li>
 </ul>
 
 <p class="setup">
