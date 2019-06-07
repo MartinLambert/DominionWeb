@@ -1085,8 +1085,8 @@ export const PERMANENTS: Card[] = [
 		text: 'At the end of your Buy phase, if you didn\'t buy any cards, <b>+1 Coffers</b> and <b>+1 Villager</b>.',
 		help: 'This only cares if you bought a card in your Buy phase; it does not care if you gained cards other ways, or if you bought an Event (from Adventures and Empires) or Project. For example if all you buy on your turn is Exploration, you will get +1 Coffers and +1 Villager that turn. Exploration only cares if you bought cards in the Buy phase whose ending triggered Exploration; this can matter when your turn has multiple Buy phases due to Villa.',
 		setup: {
-			spoils: false, ruins: false, coins: false, tavernMats: false, journey: false, VP: false, coffers: false,
-			villagers: false, plusCard: false, plusAction: false, plusBuy: false, plusOne: false, minusOne: false, minusDraw: false, debt: false
+			spoils: false, ruins: false, coins: true, tavernMats: false, journey: false, VP: false, coffers: true,
+			villagers: true, plusCard: false, plusAction: false, plusBuy: false, plusOne: false, minusOne: false, minusDraw: false, debt: false
 		}
 	},
 	{

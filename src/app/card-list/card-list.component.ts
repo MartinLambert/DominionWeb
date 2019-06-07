@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Card } from '../card';
 import { Game } from '../game';
-import { CardService } from '../card.service';
+import { CARDS } from '../cards';
+import { PERMANENTS } from '../permanents';
 
 @Component({
 	selector: 'dom-card-list',
@@ -13,11 +14,12 @@ export class CardListComponent implements OnInit {
 	kingdom: Game;
 	supply: Game;
 	selectedCard: Card;
-	// selectedSets: string[];
+	selectedSets: string[];
+	selectedPromos: string[];
 	sortBySet: boolean;
-	selectedSets: string[] = ['Dominion', 'Intrigue', 'Seaside', 'Prosperity', 'Hinterlands', 'Dark Ages', 'Adventures', 'Empires', 'Nocturne', 'Renaissance', 'Promo'];
+	// selectedSets: string[] = ['Dominion', 'Intrigue', 'Seaside', 'Prosperity', 'Hinterlands', 'Dark Ages', 'Adventures', 'Empires', 'Nocturne', 'Renaissance', 'Promo'];
 
-	constructor(private cardService: CardService) {}
+	constructor() {}
 
 	ngOnInit() {
 		this.kingdom = new Game();
@@ -28,8 +30,18 @@ export class CardListComponent implements OnInit {
 	}
 
 	getCards(): void {
-		this.cardService.getCards().subscribe(cards => this.kingdom.cards = cards);
-		this.cardService.getPermanents().subscribe(cards => this.kingdom.permanents = cards);
+		this.kingdom.cards = CARDS;
+		this.kingdom.permanents = PERMANENTS;
+	}
+
+	changeSets(newSets): void {
+		this.selectedSets = newSets;
+	}
+	changePromos(newPromos): void {
+		this.selectedPromos = newPromos;
+	}
+	changeSort(bySet): void {
+		this.sortBySet = bySet;
 	}
 
 	resetSupply(): void {
@@ -49,8 +61,6 @@ export class CardListComponent implements OnInit {
 
 	randomize(): void {
 		// Generate a new set of 10 Kingdom cards, with at least one card costing 3, 4, and 5, and up to 2 permanents
-		console.log('Randomizing');
-		console.log(this.kingdom);
 		this.resetSupply();
 		this.selectedCard = null;
 
@@ -66,7 +76,7 @@ export class CardListComponent implements OnInit {
 
 		// Permanents are only in Adventures, Empires, Renaissance, and one Promo card.
 		// There is a 25% chance of no permanents, 50% chance of one, 25% chance of two.
-		if (this.selectedSets.includes('Adventures') || this.selectedSets.includes('Empires') || this.selectedSets.includes('Renaissance') || this.selectedSets.includes('Promo')) {
+		if (this.selectedSets.includes('Adventures') || this.selectedSets.includes('Empires') || this.selectedSets.includes('Renaissance') || (this.selectedSets.includes('Promo') && this.selectedPromos.includes('Summon'))) {
 			let numPermanents = 0;
 			const theRand = Math.random();
 			if (theRand > 0.25) numPermanents++;
@@ -76,7 +86,6 @@ export class CardListComponent implements OnInit {
 		}
 
 		this.doSetup();
-		console.log(this.supply);
 	}
 
 	addCard(): Card {
@@ -103,7 +112,7 @@ export class CardListComponent implements OnInit {
 		let badCard = true;
 		while (badCard) {
 			newCard = this.kingdom.cards[Math.floor(Math.random() * this.kingdom.cards.length)];
-			badCard = !this.selectedSets.includes(newCard.set);
+			badCard = !this.selectedSets.includes(newCard.set) || ((newCard.set === 'Promo') && !this.selectedPromos.includes(newCard.name));
 		}
 		return newCard;
 	}
