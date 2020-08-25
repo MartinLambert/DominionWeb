@@ -10,6 +10,10 @@ footer {
 	&.open {
 		transform: none;
 	}
+	&>div {
+		max-height: calc(94vh - 2.5em);
+		overflow: auto;
+	}
 }
 
 

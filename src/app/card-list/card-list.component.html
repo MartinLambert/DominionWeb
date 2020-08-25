@@ -21,6 +21,7 @@
 	<span *ngIf="supply.setup.potions"><img src="assets/cards/Alchemy/Potion.jpg">Potions</span>
 	<span *ngIf="supply.setup.spoils"><img src="assets/Spoils.jpg">Spoils</span>
 	<span *ngIf="supply.setup.ruins"><img src="assets/ruins.png">Ruins</span>
+	<span *ngIf="supply.setup.horse"><img src="assets/Horse.jpg">Horse pile</span>
 	<span *ngIf="supply.setup.prizes"><img src="assets/cards/Cornucopia/prizes.png">Prizes</span>
 	<span *ngIf="supply.setup.hermit"><img src="assets/Madman.jpg">Madman pile</span>
 	<span *ngIf="supply.setup.urchin"><img src="assets/Mercenary.jpg">Mercenary pile</span>
@@ -55,9 +56,11 @@
 	<span *ngIf="supply.setup.minusOne"><img src="assets/minusOne.png">−1 Coin token</span>
 	<span *ngIf="supply.setup.minusDraw"><img src="assets/minusDraw.png">−1 Card token</span>
 	<span *ngIf="supply.setup.obelisk"><img src="assets/cards/{{ supply.setup.obeliskChoice.set.replace(' ', '_') }}/{{ supply.setup.obeliskChoice.name.replace('’', '').replace('/', '').split(' ').join('_') }}.jpg">Obelisk choice</span>
+	<span *ngIf="supply.setup.mouse"><img src="assets/cards/{{ supply.setup.mouseChoice.set.replace(' ', '_') }}/{{ supply.setup.mouseChoice.name.replace('’', '').replace('/', '').split(' ').join('_') }}.jpg">Mouse choice</span>
 </p>
 <p class="wide">
 	<span *ngIf="supply.setup.tavernMats"><img src="assets/Tavern_mat.jpg">Tavern Mats</span>
+	<span *ngIf="supply.setup.exile"><img src="assets/Exile_mat.jpg">Exile Mats</span>
 	<span *ngIf="supply.setup.bane"><span class="bane" style="background: transparent url('assets/cards/Cornucopia/Bane.jpg') center/contain no-repeat"><img src="assets/cards/{{ supply.setup.baneChoice.set.replace(' ', '_') }}/{{ supply.setup.baneChoice.name.replace('’', '').replace('/', '').split(' ').join('_') }}.jpg"></span>Young Witch’s Bane</span>
 	<span *ngIf="supply.setup.boon"><img src="assets/cards/Nocturne/Boon.jpg">Boon deck</span>
 	<span *ngIf="supply.setup.hex"><img src="assets/cards/Nocturne/Hex.jpg">Hex deck</span>

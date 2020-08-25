@@ -131,5 +131,8 @@
       }
     }
   },
-  "defaultProject": "DominionWeb"
+  "defaultProject": "DominionWeb",
+  "cli": {
+    "analytics": "f20cbfae-9c52-4bb3-b864-262a82e6b304"
+  }
 }

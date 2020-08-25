@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Card } from '../card';
+import { Component, Input, OnInit } from '@angular/core'
+import { Card } from '../card'
 
 @Component({
 	selector: 'dom-card-detail',
@@ -8,8 +8,8 @@ import { Card } from '../card';
 })
 export class CardDetailComponent implements OnInit {
 
-	@Input() card: Card;
-	front = true;
+	@Input() card: Card
+	front = true
 
 	constructor() {}
 
