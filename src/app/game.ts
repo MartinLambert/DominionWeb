@@ -10,6 +10,6 @@ export class Game {
 		nativeVillage: boolean, pirateShip: boolean, island: boolean, tradeRoute: boolean, hermit: boolean, urchin: boolean, page: boolean, peasant: boolean,
 		obelisk: boolean, mirror: boolean, lamp: boolean, goat: boolean, pasture: boolean, pouch: boolean, cursedGold: boolean, luckyCoin: boolean, wisp: boolean,
 		imp: boolean, ghost: boolean, boon: boolean, hex: boolean, wishes: boolean, zombies: boolean, bats: boolean, baneChoice: Card, obeliskChoice: Card, flag: boolean,
-		horn: boolean, key: boolean, lantern: boolean, chest: boolean, cubes: boolean, exile: boolean, horse: boolean, mouse: boolean, mouseChoice: Card
+		horn: boolean, key: boolean, lantern: boolean, chest: boolean, cubes: boolean, exile: boolean, horse: boolean, mouse: boolean, mouseChoice: Card, market: boolean
 	}
 }

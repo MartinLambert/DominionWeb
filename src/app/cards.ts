@@ -5970,6 +5970,40 @@ export const CARDS: Card[] = [
 	},
 	{
 		id: 2002,
+		name: 'Captain',
+		set: 'Promo',
+		cardType: ['Action', 'Duration'],
+		cost: {
+			coin: 6,
+			debt: 0,
+			potion: 0
+		},
+		text: 'Now and at the start of your next turn: Play a non-Duration, non-Command Action card from the Supply costing up to <img src="assets/Coin4.png">, leaving it there.',
+		help: '<p>[Command cards are Captain, Overseer, and Band of Misfits. This restriction is to prevent infinite loops.]</p><p>You may choose the same card on the second turn (if it is still in the Supply) or a different card. In the case of a mixed or split pile, it can only play the card currently on top. Any effect that tries to move the card (like an Island moving to your Island mat) will fail. If the card attempts to trash itself, it will not; if the card then checks whether it did so, such as Mining Village, it will fail. If it does not check, like Acting Troupe, it will work fine. Cards that move other cards from the Supply may move themselves, so you can use Workshop to gain itself or Lurker to trash itself. The played card is not “in play” and any effects that require it to be will fail. If there are somehow no eligible cards in the Supply on the turn you play Captain, it still remains in play to try again on your next turn.</p>',
+		setup: {
+			spoils: false, ruins: false, coins: false, tavernMats: false, journey: false, VP: false, coffers: false, villagers: false, plusCard: false,
+			plusAction: false, plusBuy: false, plusOne: false, minusOne: false, minusDraw: false, debt: false, exile: false, horse: false
+		}
+	},
+	{
+		id: 2003,
+		name: 'Church',
+		set: 'Promo',
+		cardType: ['Action', 'Duration'],
+		cost: {
+			coin: 3,
+			debt: 0,
+			potion: 0
+		},
+		text: '<b>+1 Action</b><br>Set aside up to 3 cards from your hand face down. At the start of your next turn, put them into your hand, then you may trash a card from your hand.',
+		help: '<p>You may set aside zero cards. Regardless of how many cards you set aside, you may trash a card at the start of your next turn and Church is discarded at the end of that turn. If you play multiple Churches (or one Church multiple times), you set aside multiple batches of 0–3 cards. At the start of the next turn, you pick up one batch of cards, optionally trash one card, pick up the next batch, optionally trash another card, etc. You decide which order to pick them up in.</p>',
+		setup: {
+			spoils: false, ruins: false, coins: false, tavernMats: false, journey: false, VP: false, coffers: false, villagers: false, plusCard: false,
+			plusAction: false, plusBuy: false, plusOne: false, minusOne: false, minusDraw: false, debt: false, exile: false, horse: false
+		}
+	},
+	{
+		id: 2004,
 		name: 'Dismantle',
 		set: 'Promo',
 		cardType: ['Action'],
@@ -5983,10 +6017,10 @@ export const CARDS: Card[] = [
 		setup: {
 			spoils: false, ruins: false, coins: false, tavernMats: false, journey: false, VP: false, coffers: false, villagers: false, plusCard: false,
 			plusAction: false, plusBuy: false, plusOne: false, minusOne: false, minusDraw: false, debt: false, exile: false, horse: false
-}
+		}
 	},
 	{
-		id: 2003,
+		id: 2005,
 		name: 'Envoy',
 		set: 'Promo',
 		cardType: ['Action'],
@@ -6003,7 +6037,7 @@ export const CARDS: Card[] = [
 }
 	},
 	{
-		id: 2004,
+		id: 2006,
 		name: 'Governor',
 		set: 'Promo',
 		cardType: ['Action'],
@@ -6020,7 +6054,7 @@ export const CARDS: Card[] = [
 }
 	},
 	{
-		id: 2005,
+		id: 2007,
 		name: 'Prince',
 		set: 'Promo',
 		cardType: ['Action'],
@@ -6037,7 +6071,7 @@ export const CARDS: Card[] = [
 }
 	},
 	{
-		id: 2006,
+		id: 2008,
 		name: 'Sauna/Avanto',
 		set: 'Promo',
 		cardType: ['Action'],
@@ -6054,7 +6088,7 @@ export const CARDS: Card[] = [
 }
 	},
 	{
-		id: 2007,
+		id: 2009,
 		name: 'Stash',
 		set: 'Promo',
 		cardType: ['Treasure'],
@@ -6071,7 +6105,7 @@ export const CARDS: Card[] = [
 }
 	},
 	{
-		id: 2008,
+		id: 2010,
 		name: 'Walled Village',
 		set: 'Promo',
 		cardType: ['Action'],

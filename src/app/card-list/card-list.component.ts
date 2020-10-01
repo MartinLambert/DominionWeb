@@ -114,7 +114,8 @@ export class CardListComponent implements OnInit {
 			exile: false,
 			horse: false,
 			mouse: false,
-			mouseChoice: new Card()
+			mouseChoice: new Card(),
+			market: false
 		}
 	}
 
@@ -133,7 +134,7 @@ export class CardListComponent implements OnInit {
 				this.supply.cards = []
 		}
 
-		// Permanents are only in Adventures, Empires, Renaissance, and one Promo card.
+		// Permanents are only in Adventures, Empires, Renaissance, Menagerie, and one Promo card.
 		// There is a 25% chance of no permanents, 50% chance of one, 25% chance of two.
 		if (this.selectedSets.includes('Adventures') || this.selectedSets.includes('Empires') || this.selectedSets.includes('Renaissance') || this.selectedSets.includes('Menagerie') || (this.selectedSets.includes('Promo') && this.selectedPromos.includes('Summon'))) {
 			let numPermanents = 0
@@ -338,6 +339,8 @@ export class CardListComponent implements OnInit {
 			this.supply.setup.key = true
 		if (card.id === 1459)
 			this.supply.setup.mouse = true
+		if (card.id === 2001)
+			this.supply.setup.market = true
 	}
 
 	onSelect(card: Card): void {

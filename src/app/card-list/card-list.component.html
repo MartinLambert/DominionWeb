@@ -62,6 +62,7 @@
 	<span *ngIf="supply.setup.tavernMats"><img src="assets/Tavern_mat.jpg">Tavern Mats</span>
 	<span *ngIf="supply.setup.exile"><img src="assets/Exile_mat.jpg">Exile Mats</span>
 	<span *ngIf="supply.setup.bane"><span class="bane" style="background: transparent url('assets/cards/Cornucopia/Bane.jpg') center/contain no-repeat"><img src="assets/cards/{{ supply.setup.baneChoice.set.replace(' ', '_') }}/{{ supply.setup.baneChoice.name.replace('’', '').replace('/', '').split(' ').join('_') }}.jpg"></span>Young Witch’s Bane</span>
+	<span *ngIf="supply.setup.market"><img src="assets/cards/Promo/Market.jpg">Black Market Deck</span>
 	<span *ngIf="supply.setup.boon"><img src="assets/cards/Nocturne/Boon.jpg">Boon deck</span>
 	<span *ngIf="supply.setup.hex"><img src="assets/cards/Nocturne/Hex.jpg">Hex deck</span>
 	<span *ngIf="supply.setup.hex"><img src="assets/states.png">States</span>

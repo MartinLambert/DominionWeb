@@ -12,9 +12,9 @@ export class OptionsComponent implements OnInit {
 	@Output() changeSort = new EventEmitter<boolean>()
 	@Output() changePromos = new EventEmitter<string[]>()
 	allSets: string[] = ['Dominion', 'Intrigue', 'Seaside', 'Alchemy', 'Prosperity', 'Cornucopia', 'Hinterlands', 'Dark Ages', 'Guilds', 'Adventures', 'Empires', 'Nocturne', 'Renaissance', 'Menagerie', 'Promo']
-	selectedSets: string[] = ['Dominion', 'Intrigue', 'Seaside', 'Prosperity', 'Cornucopia', 'Hinterlands', 'Dark Ages', 'Guilds', 'Adventures', 'Empires', 'Nocturne', 'Renaissance', 'Menagerie', 'Promo']
-	allPromos: string[] = ['Black Market', 'Dismantle', 'Envoy', 'Governor', 'Prince', 'Sauna/Avanto', 'Stash', 'Summon', 'Walled Village']
-	selectedPromos: string[] = ['Governor', 'Sauna/Avanto', 'Summon', 'Walled Village']
+	selectedSets: string[] = ['Dominion', 'Intrigue', 'Seaside', 'Alchemy', 'Prosperity', 'Cornucopia', 'Hinterlands', 'Dark Ages', 'Guilds', 'Adventures', 'Empires', 'Nocturne', 'Renaissance', 'Menagerie', 'Promo']
+	allPromos: string[] = ['Black Market', 'Captain', 'Church', 'Dismantle', 'Envoy', 'Governor', 'Prince', 'Sauna/Avanto', 'Stash', 'Summon', 'Walled Village']
+	selectedPromos: string[] = ['Black Market', 'Captain', 'Church', 'Dismantle', 'Envoy', 'Governor', 'Prince', 'Sauna/Avanto', 'Stash', 'Summon', 'Walled Village']
 	panelOpen: boolean
 	sortBySet = false
 
